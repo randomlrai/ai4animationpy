@@ -32,3 +32,9 @@ outlined on that page and do not file a public issue.
 ## License
 By contributing to this project, you agree that your contributions will be licensed
 under the LICENSE file in the root directory of this source tree.
+
+---
+
+> **Personal note:** This is my personal fork used for learning and experimentation.
+> I am not actively submitting PRs upstream. Changes here may diverge from the
+> original repository.
