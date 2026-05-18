@@ -32,7 +32,8 @@ import Definitions
 
 # Reduced epoch count from 150 to 100 for faster experimentation on my machine
 EPOCH_COUNT = 100
-BATCH_SIZE = 32
+# Reduced batch size from 32 to 16 to avoid OOM on my GPU (8GB VRAM)
+BATCH_SIZE = 16
 FRAMERATE = 30
 DRAW_INTERVAL = 500
 BONES = Definitions.FULL_BODY_NAMES
@@ -110,6 +111,4 @@ class Program:
             Definitions.FULL_BODY_NAMES,
         )
         self.Simulated = AI4Animation.Scene.AddEntity("Simulated").AddComponent(
-            Actor,
-            os.path.join(ASSETS_PATH, "Model.glb"),
-         
+ 
