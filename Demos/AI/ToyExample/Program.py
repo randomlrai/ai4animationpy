@@ -6,13 +6,13 @@ from ai4animation import AI4Animation, MultiLayerPerceptron, Plotting, Tensor, U
 
 class Program:
     def Start(self):
-        self.EpochCount = 150
+        self.EpochCount = 200  # increased from 150 for better convergence
         self.BatchSize = 32
         self.BatchCount = 10
         self.SampleCount = self.BatchSize * self.BatchCount
         self.DrawInterval = 500
         self.Network = Tensor.ToDevice(
-            MultiLayerPerceptron.Model(input_dim=1, output_dim=100, hidden_dim=128)
+            MultiLayerPerceptron.Model(input_dim=1, output_dim=100, hidden_dim=256)  # wider hidden layer
         )
 
         self.Optimizer = Utility.CosineAnnealingOptimizer(
